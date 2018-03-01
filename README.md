@@ -1,20 +1,36 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# generator-tuleva-web-app [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+> Generator for standarized web app at Tuleva
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+## Installation
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+First, install [Yeoman](http://yeoman.io) and generator-tuleva-web-app using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+```bash
+npm install -g yo
+npm install -g generator-tuleva-web-app
+```
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://www.visualstudio.com/en-us/docs/git/create-a-readme). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+Then generate your new project:
+
+```bash
+yo tuleva-web-app
+```
+
+## Getting To Know Yeoman
+
+ * Yeoman has a heart of gold.
+ * Yeoman is a person with feelings and opinions, but is very easy to work with.
+ * Yeoman can be too opinionated at times but is easily convinced not to be.
+ * Feel free to [learn more about Yeoman](http://yeoman.io/).
+
+## License
+
+ © [Sebastian Schütze](http://www.tuleva.de)
+
+
+[npm-image]: https://badge.fury.io/js/generator-tuleva-web-app.svg
+[npm-url]: https://npmjs.org/package/generator-tuleva-web-app
+[travis-image]: https://travis-ci.org/Tuleva AG/generator-tuleva-web-app.svg?branch=master
+[travis-url]: https://travis-ci.org/Tuleva AG/generator-tuleva-web-app
+[daviddm-image]: https://david-dm.org/Tuleva AG/generator-tuleva-web-app.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org/Tuleva AG/generator-tuleva-web-app

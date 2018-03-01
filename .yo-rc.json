@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Sebastian Schütze",
+      "authorEmail": "sebastian.schuetze@tuleva.de",
+      "authorUrl": "http://www.tuleva.de"
+    }
+  }
+}

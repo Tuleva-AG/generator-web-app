@@ -1,0 +1,69 @@
+{
+  "name": "react-template-project",
+  "version": "0.0.1",
+  "author": "Tuleva AG",
+  "description": "Template project for react",
+  "contributors": [
+    {
+      "name": "Simon Temp",
+      "email": "simon.temp@direkt-gruppe.de"
+    }
+  ],
+  "engine": "node >= 0.10.x",
+  "homepage": "http://www.tuleva.de",
+  "bugs": {
+    "url": "https://tulevaag.visualstudio.com/"
+  },
+  "private": true,
+  "scripts": {
+    "build": "webpack --optimize-minimize",
+    "build:debug": "webpack",
+    "build:prod": "webpack -p --optimize-minimize",
+    "serve": "webpack-dev-server --https",
+    "eslint": "eslint \"**.js\"",
+    "tslint": "tslint \"src/**/*.ts*\"",
+    "test": "mocha --opts mocha.opts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://tulevaag.visualstudio.com/"
+  },
+  "dependencies": {
+    "@types/react": "^15.6.14",
+    "@types/react-dom": "^15.5.7",
+    "@types/react-responsive": "^1.1.11",
+    "@types/sharepoint": "^2013.1.9",
+    "@types/webpack-env": "^1.13.5",
+    "awesome-typescript-loader": "^3.5.0",
+    "css-loader": "^0.28.10",
+    "es6-promise": "^4.2.4",
+    "html-webpack-plugin": "^2.29.0",
+    "html-webpack-template": "^6.1.0",
+    "node-sass": "^4.7.2",
+    "office-ui-fabric-react": "^5.57.0",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-inlinesvg": "^0.6.0",
+    "react-responsive": "^2.0.0",
+    "sass-loader": "^6.0.6",
+    "source-map-loader": "^0.2.3",
+    "style-loader": "^0.18.2",
+    "svg-inline-react": "^2.1.0",
+    "ts-loader": "^2.2.2",
+    "ts-node": "^3.2.0",
+    "tslint": "^5.9.1",
+    "tslint-loader": "^3.6.0",
+    "typescript": "~2.4.1",
+    "whatwg-fetch": "^2.0.3"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.2",
+    "@types/mocha": "^2.2.48",
+    "@types/prop-types": "^15.5.2",
+    "chai": "^4.1.0",
+    "file-loader": "^0.11.2",
+    "mocha": "^3.4.2",
+    "webpack": "^3.11.0",
+    "webpack-dev-server": "^2.11.2"
+  }
+}
