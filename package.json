@@ -78,6 +78,6 @@
       "prettier"
     ]
   },
-  "repository": "Tuleva AG/generator-tuleva-web-app",
-  "private": true
+  "repository": "https://tulevaag.visualstudio.com/Tuleva-ProjectTemplates/_git/generator-tuleva-web-app",
+  "private": false
 }
