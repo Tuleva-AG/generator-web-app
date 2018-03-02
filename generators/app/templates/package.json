@@ -1,14 +1,8 @@
 {
-  "name": "react-template-project",
+  "name": "<%= name %>",
   "version": "0.0.1",
-  "author": "Tuleva AG",
-  "description": "Template project for react",
-  "contributors": [
-    {
-      "name": "Simon Temp",
-      "email": "simon.temp@direkt-gruppe.de"
-    }
-  ],
+  "author": "<%= author %>",
+  "description": "<%= description %>",
   "engine": "node >= 0.10.x",
   "homepage": "http://www.tuleva.de",
   "bugs": {
@@ -32,7 +26,6 @@
     "@types/react": "^15.6.14",
     "@types/react-dom": "^15.5.7",
     "@types/react-responsive": "^1.1.11",
-    "@types/sharepoint": "^2013.1.9",
     "@types/webpack-env": "^1.13.5",
     "awesome-typescript-loader": "^3.5.0",
     "css-loader": "^0.28.10",
