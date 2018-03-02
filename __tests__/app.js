@@ -11,6 +11,6 @@ describe('generator-tuleva-web-app:app', () => {
   });
 
   it('creates files', () => {
-    assert.file(['dummyfile.txt']);
+    assert.file(['tslint.json','webpack.config.js','tsconfig.json','readme.md']);
   });
 });
