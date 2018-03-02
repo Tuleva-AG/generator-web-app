@@ -1,36 +1,37 @@
-# generator-tuleva-web-app [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
-> Generator for standarized web app at Tuleva
+# generator-tuleva-web-app
 
 ## Installation
 
-First, install [Yeoman](http://yeoman.io) and generator-tuleva-web-app using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
+First, we need to configure your environment to use our custom npm feed in our [VSTS](https://tulevaag.visualstudio.com).
+For this vsts-npm-auth must be installed from the public npm feed.
+
+```bash
+npm install -g vsts-npm-auth --registry https://registry.npmjs.com --always-auth false
+```
+
+Second, we need to authenticate against VSTS. Use your Azure AD account from tuleva.
+
+```bash
+vsts-npm-auth -config .npmrc
+```
+
+last, install [Yeoman](http://yeoman.io) and generator-tuleva-web-app using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)). And also install the tuleva web app generator published on our private npm feed.
 
 ```bash
 npm install -g yo
-npm install -g generator-tuleva-web-app
+npm install -g generator-tuleva-web-app --registry https://tulevaag.pkgs.visualstudio.com/_packaging/ProjectTemplates/npm/registry/
 ```
 
-Then generate your new project:
+And then generate your new project:
 
 ```bash
 yo tuleva-web-app
 ```
 
-## Getting To Know Yeoman
-
- * Yeoman has a heart of gold.
- * Yeoman is a person with feelings and opinions, but is very easy to work with.
- * Yeoman can be too opinionated at times but is easily convinced not to be.
- * Feel free to [learn more about Yeoman](http://yeoman.io/).
-
 ## License
 
- © [Sebastian Schütze](http://www.tuleva.de)
+ © [Tuleva AG](http://www.tuleva.de)
 
+[build-image]: https://tulevaag.visualstudio.com/_apis/public/build/definitions/723f273b-a8e1-44b1-b9e5-761636473868/6/badge
 
-[npm-image]: https://badge.fury.io/js/generator-tuleva-web-app.svg
-[npm-url]: https://npmjs.org/package/generator-tuleva-web-app
-[travis-image]: https://travis-ci.org/Tuleva AG/generator-tuleva-web-app.svg?branch=master
-[travis-url]: https://travis-ci.org/Tuleva AG/generator-tuleva-web-app
-[daviddm-image]: https://david-dm.org/Tuleva AG/generator-tuleva-web-app.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/Tuleva AG/generator-tuleva-web-app
+[build-url]: https://tulevaag.visualstudio.com/Tuleva-ProjectTemplates/_build/index?context=mine&path=%5C&definitionId=6&_a=completed
