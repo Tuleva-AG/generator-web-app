@@ -38,7 +38,14 @@ module.exports = class extends Generator {
   }
 
   writing() {
-    this.fs.copy(this.templatePath(''), this.destinationPath(''));
+    this.fs.copyTpl(
+      this.templatePath(''), 
+      this.destinationPath(''),
+    {
+      name: this.props.name,
+      description: this.props.description,
+      author: this.props.author,
+    });
   }
 
   install() {
