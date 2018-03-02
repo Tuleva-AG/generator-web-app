@@ -15,7 +15,7 @@ Second, we need to authenticate against VSTS. Use your Azure AD account from tul
 vsts-npm-auth -config .npmrc
 ```
 
-last, install [Yeoman](http://yeoman.io) and generator-tuleva-web-app using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)). And also install the tuleva web app generator published on our private npm feed.
+Last, install [Yeoman](http://yeoman.io) using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)). And also install the tuleva web app generator published on our private npm feed.
 
 ```bash
 npm install -g yo
@@ -27,6 +27,26 @@ And then generate your new project:
 ```bash
 yo tuleva-web-app
 ```
+
+The project includes the following frameworks / technologies that can be used:
+* react (ui framework)
+* webpack (for building)
+* sass (for css)
+* typescript (default language)
+* office fabric ui for react
+* mocha (unit testing)
+* tslint (TypeScript style checks)
+* eslint (JavaScript style checks)
+
+For npm the following tasks
+
+* build - building with optimized options
+* build:debug - building with debug options
+* build:prod - building with optionized options for production
+* serve - start the webserver
+* eslint - run style checks for JavaScript
+* tslint - run style checks for TypeScript
+* test - run unti test with mocha
 
 ## License
 
