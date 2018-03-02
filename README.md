@@ -19,7 +19,7 @@ Last, install [Yeoman](http://yeoman.io) using [npm](https://www.npmjs.com/) (we
 
 ```bash
 npm install -g yo
-npm install -g generator-tuleva-web-app --registry https://tulevaag.pkgs.visualstudio.com/_packaging/ProjectTemplates/npm/registry/
+npm install -g generator-tuleva-web-app --registry https://tulevaag.pkgs.visualstudio.com/_packaging/TulevaExtensions/npm/registry/
 ```
 
 And then generate your new project:
