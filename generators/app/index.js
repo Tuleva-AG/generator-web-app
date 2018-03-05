@@ -16,14 +16,14 @@ module.exports = class extends Generator {
         type: 'input',
         name: 'name',
         message: 'Name of your project (default: name of the folder)',
-        validate: (name) =>{
+        validate: (name) => {
 
           var results = validateNpm(name)
 
           var messages = ''
-          if(!results.validNpmPackage){
+          if (!results.validNpmPackage) {
             return results.errors.join('\n');
-          }else{
+          } else {
             return true;
           }
 
@@ -58,36 +58,71 @@ module.exports = class extends Generator {
       author: this.props.author,
     }
 
-    this.fs.copyTpl(
-      this.templatePath('package.json'),
-      this.destinationPath('package.json'),
-      answers
-    );
+    let filesToCopy = [{
+        from: 'package.json',
+        to: 'package.json',
+        tpl: true
+      },
+      {
+        from: 'src/**',
+        to: 'src/',
+        tpl: false
+      },
+      {
+        from: 'tests/**',
+        to: 'tests/',
+        tpl: false
+      },
+      {
+        from: 'rulesets/csslintrc.json',
+        to: '.csslintrc',
+        tpl: false
+      },
+      {
+        from: 'rulesets/eslintrc.json',
+        to: '.eslintrc',
+        tpl: false
+      },
+      {
+        from: 'rulesets/tslint.json',
+        to: 'tslint.json',
+        tpl: false
+      },
+      {
+        from: 'mocha.opts',
+        to: 'mocha.opts',
+        tpl: false
+      },
+      {
+        from: 'readme.md',
+        to: 'readme.md',
+        tpl: false
+      },
+      {
+        from: 'webpack.config.js',
+        to: 'webpack.config.js',
+        tpl: false
+      },
+      {
+        from: 'tsconfig.json',
+        to: 'tsconfig.json',
+        tpl: false
+      }
+    ];
 
-    this.fs.copy(
-      this.templatePath('src/**'),
-      this.destinationPath('src/')
-    );
+    filesToCopy.forEach(fileToCopy => {
 
-    this.fs.copy(
-      this.templatePath('tests/**'),
-      this.destinationPath('tests/')
-    );
+      let from = this.templatePath(fileToCopy.from),
+        to = this.destinationPath(fileToCopy.to);
 
-    this.fs.copy(
-      this.templatePath('rulesets/csslintrc.json'),
-      this.destinationPath('.csslintrc')
-    );
+      if (fileToCopy.tpl) {
+        this.fs.copyTpl(from, to, answers);
+      } else {
+        this.fs.copy(from, to);
+      }
 
-    this.fs.copy(
-      this.templatePath('rulesets/eslintrc.json'),
-      this.destinationPath('.eslintrc')
-    );
+    });
 
-    this.fs.copy(
-      this.templatePath('rulesets/tslint.json'),
-      this.destinationPath('tslint.json')
-    );
   }
 
   install() {

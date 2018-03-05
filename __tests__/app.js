@@ -31,9 +31,9 @@ describe('generator-tuleva-web-app:app', () => {
 
     it('create rule sets', () => {
       assert.file([
-        'rulesets/csslintrc.json',
-        'rulesets/eslintrc.json',
-        'rulesets/tslint.json'
+        '.csslintrc',
+        '.eslintrc',
+        'tslint.json'
       ]);
     });
 
