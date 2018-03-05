@@ -1,7 +1,7 @@
 /// <reference types="mocha" />
 
 import {assert} from "chai";
-import HelloDate from "./../src/components/utlities/helloDate";
+import HelloDate from "./../src/components/utilities/helloDate";
 
 describe("Date Functions", () => {
     describe("GetCurrentDateByType", () => {

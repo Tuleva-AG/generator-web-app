@@ -1,7 +1,7 @@
 import * as React from "react";
 import { IAppProps } from "./App.Props";
 import { IAppStates } from "./App.States";
-import HelloDate from "./../utlities/helloDate";
+import HelloDate from "./../utilities/helloDate";
 import "./App.scss";
 
 
