@@ -2,7 +2,7 @@
 const path = require('path');
 const assert = require('yeoman-assert');
 const helpers = require('yeoman-test');
-
+ 
 describe('generator-tuleva-web-app:app', () => {
   beforeAll(() => {
     return helpers
