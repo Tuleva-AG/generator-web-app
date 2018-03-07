@@ -4,7 +4,7 @@ const chalk = require('chalk');
 const yosay = require('yosay');
 const utilities = require('./../../common/utilities')
 const validateNpm = require('./../../common/validateNpmName')
-
+ 
 module.exports = class extends Generator {
   prompting() {
     // Have Yeoman greet the user.
