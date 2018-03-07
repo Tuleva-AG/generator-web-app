@@ -9,8 +9,13 @@ For this vsts-npm-auth must be installed from the public npm feed.
 npm install -g vsts-npm-auth --registry https://registry.npmjs.com --always-auth false
 ```
 
-Second, we need to authenticate against VSTS. Use your Azure AD account from tuleva.
+Second, we need to create the .npmrc file with our remote repository and authenticate against VSTS. Use your Azure AD account from tuleva.
+Create the .npmrc file in your new project folder in the root of the project. Copy the following line into this file
 
+```text
+registry=https://tulevaag.pkgs.visualstudio.com/_packaging/TulevaExtension/npm/registry/
+always-auth=true
+```
 ```bash
 vsts-npm-auth -config .npmrc
 ```
@@ -19,9 +24,8 @@ Last, install [Yeoman](http://yeoman.io) using [npm](https://www.npmjs.com/) (we
 
 ```bash
 npm install -g yo
-npm install -g generator-tuleva-web-app --registry https://tulevaag.pkgs.visualstudio.com/_packaging/TulevaExtensions/npm/registry/
+npm install -g generator-tuleva-web-app --registry https://tulevaag.pkgs.visualstudio.com/_packaging/TulevaExtension/npm/registry/
 ```
-
 And then generate your new project:
 
 ```bash
