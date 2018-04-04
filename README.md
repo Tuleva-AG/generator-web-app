@@ -13,7 +13,7 @@ Second, we need to create the .npmrc file with our remote repository and authent
 Create the .npmrc file in your new project folder in the root of the project. Copy the following line into this file
 
 ```text
-registry=https://tulevaag.pkgs.visualstudio.com/_packaging/TulevaExtension/npm/registry/
+registry=https://tulevaag.pkgs.visualstudio.com/_packaging/TulevaExtensionPreviews/npm/registry/
 always-auth=true
 ```
 ```bash
