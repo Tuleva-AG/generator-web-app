@@ -41,7 +41,7 @@ describe('generator-tuleva-web-app:app', () => {
       assert.file([
         'src/index.tsx',
         'src/style.scss',
-        'src/app/components/utilities/helloDate.ts',
+        'src/app/utilities/helloDate.ts',
         'src/app/components/App/App.Props.ts',
         'src/app/components/App/App.scss',
         'src/app/components/App/App.States.ts',
