@@ -2,7 +2,7 @@
 const path = require('path');
 const assert = require('yeoman-assert');
 const helpers = require('yeoman-test');
- 
+
 describe('generator-tuleva-web-app:app', () => {
   beforeAll(() => {
     return helpers
@@ -12,12 +12,12 @@ describe('generator-tuleva-web-app:app', () => {
       });
   });
 
-  describe('check template files', ()=>{
+  describe('check template files', () => {
 
     it('create basic project files', () => {
       assert.file([
         'readme.md',
-        'tsconfig.json',        
+        'tsconfig.json',
         'webpack.config.js'
       ]);
     });
@@ -41,15 +41,15 @@ describe('generator-tuleva-web-app:app', () => {
       assert.file([
         'src/index.tsx',
         'src/style.scss',
-        'src/components/utilities/helloDate.ts',
-        'src/components/App/App.Props.ts',
-        'src/components/App/App.scss',
-        'src/components/App/App.States.ts',
-        'src/components/App/App.tsx'
+        'src/app/components/utilities/helloDate.ts',
+        'src/app/components/App/App.Props.ts',
+        'src/app/components/App/App.scss',
+        'src/app/components/App/App.States.ts',
+        'src/app/components/App/App.tsx'
       ]);
     });
 
   })
 
- 
+
 });
