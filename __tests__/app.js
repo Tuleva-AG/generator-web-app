@@ -42,10 +42,10 @@ describe('generator-tuleva-web-app:app', () => {
         'src/index.tsx',
         'src/style.scss',
         'src/app/utilities/helloDate.ts',
-        'src/app/components/App/App.Props.ts',
-        'src/app/components/App/App.scss',
-        'src/app/components/App/App.States.ts',
-        'src/app/components/App/App.tsx'
+        'src/app/components/App.Props.ts',
+        'src/app/components/App.scss',
+        'src/app/components/App.States.ts',
+        'src/app/components/App.tsx'
       ]);
     });
 
