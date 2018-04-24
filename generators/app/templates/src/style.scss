@@ -1,0 +1,37 @@
+header {
+  position: relative;
+  #header {
+    font-size: 25px;
+  }
+  img {
+    position: absolute;
+    right: 10px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  header {
+    #header {
+      font-size: 20px;
+    }
+    img {
+      top: 20px;
+      width: 60%;
+    }
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #003e66;
+  text-align: center;
+  color: #fff;
+  padding: 5px;
+}
+
+.ms-Grid-row {
+  margin: 0 0px 12px;
+}

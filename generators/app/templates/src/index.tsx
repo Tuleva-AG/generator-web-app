@@ -4,9 +4,9 @@ import { initializeIcons } from 'office-ui-fabric-react/lib/Icons';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import { App } from './app/components/App';
+import { MainComponent } from './app/components/main/mainComponent';
 
 initializeIcons(undefined, { disableWarnings: true });
 
-ReactDOM.render(<App title="Hello World!" />, document.getElementById("app"));
+ReactDOM.render(<MainComponent title='' />, document.getElementById("app"));
 

@@ -1,0 +1,6 @@
+app:
+  title: Tuleva React Template
+  credits: Tuleva AG - design the future
+  currentDateString: The current day of month is
+button:
+  text: Show Me the Day!
