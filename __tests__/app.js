@@ -40,12 +40,7 @@ describe('generator-tuleva-web-app:app', () => {
     it('create app files', () => {
       assert.file([
         'src/index.tsx',
-        'src/style.scss',
-        'src/app/utilities/helloDate.ts',
-        'src/app/components/App.Props.ts',
-        'src/app/components/App.scss',
-        'src/app/components/App.States.ts',
-        'src/app/components/App.tsx'
+        'src/style.scss'
       ]);
     });
 
