@@ -50,10 +50,10 @@ export class MainComponent extends React.Component<IMainComponentProps,
         this._setLanguage();
         const { language, visibleState } = this.state;
         let buttonClick = this.onClickShowText.bind(this);
-        let showText = "";
+        let showText = '';
 
         if (this.state.visibleState) {
-            showText = T.translate('app.currentDateString').toString() + ' ' + HelloDate.GetCurrentDateByType("date");
+            showText = T.translate('app.currentDateString').toString() + ' ' + HelloDate.GetCurrentDateByType('date');
         }
 
         return (
@@ -70,7 +70,7 @@ export class MainComponent extends React.Component<IMainComponentProps,
                     </div>
                     <div className='ms-Grid-row'>
                         <div className='ms-Grid-col ms-sm12 ms-md12 ms-lg12'>
-                            <div className="helloWorld-text">
+                            <div>
                                 <b>{showText}</b>
                             </div>
                         </div>

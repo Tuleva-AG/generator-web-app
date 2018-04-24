@@ -8,5 +8,5 @@ import { MainComponent } from './app/components/main/mainComponent';
 
 initializeIcons(undefined, { disableWarnings: true });
 
-ReactDOM.render(<MainComponent title='' />, document.getElementById("app"));
+ReactDOM.render(<MainComponent title='' />, document.getElementById('app'));
 
