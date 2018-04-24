@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require("path");
@@ -13,7 +14,9 @@ module.exports = {
     filename: "app.js",
     path: path.join(__dirname, "dist")
   },
-  devServer: {},
+  devServer: {
+    hot: true
+  },
 
   // Enable sourcemaps for debugging webpack's output.
   devtool: "source-map",
@@ -67,6 +70,7 @@ module.exports = {
       ]
 
     }),
+    new webpack.HotModuleReplacementPlugin(),
     new CopyWebpackPlugin([{
       from: 'src/images',
       to: 'images'
