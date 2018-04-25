@@ -6,7 +6,7 @@ export default class HelloDate {
     public static GetCurrentDateByType(typeOfDate: string): string {
         switch (typeOfDate) {
             case 'date':
-                return moment().format('DD'); //(new Date).getDate().toString();
+                return moment().format('DD');
 
             default:
                 throw 'Wrong type';
