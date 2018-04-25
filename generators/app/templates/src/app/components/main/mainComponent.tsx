@@ -20,40 +20,31 @@ export class MainComponent extends React.Component<IMainComponentProps,
         this.state = {
             language: 'de',
             languageName: 'Deutsch',
-            visibleState: false
+            visibleState: false,
+            showMomentDate: '',
+            showApiDate: ''
         };
     }
-    public onClickShowText(e: Event) {
-        e.preventDefault();
-        e.stopPropagation();
-        this.setState({
-            visibleState: true
-        });
-    }
-
     private translationsDe = require('json-loader!yaml-loader!./../../i18n/de.yml');
     private translationsEn = require('json-loader!yaml-loader!./../../i18n/en.yml');
-    private _host: HTMLElement;
-    public render() {
 
-        loadTheme({
-            palette: {
-                'themeDarker': '#003e66',
-                'themeDark': '#003e66',
-                'themeDarkAlt': '#003e66',
-                'themePrimary': '#003e66',
-                'themeSecondary': '#ff041a',
-                'themeTertiary': '#ff5765'
-            }
-        });
+    public render() {
 
         this._setLanguage();
         const { language, visibleState } = this.state;
         let buttonClick = this.onClickShowText.bind(this);
-        let showText = '';
+        let showMomentDate = '';
 
         if (this.state.visibleState) {
-            showText = T.translate('app.currentDateString').toString() + ' ' + HelloDate.GetCurrentDateByType('date');
+            showMomentDate = T.translate('app.currentDateString').toString() + ' ' + HelloDate.GetCurrentDateByType('date');
+            // this.setState({ showMomentDate: T.translate('app.currentDateString').toString() + ' ' + HelloDate.GetCurrentDateByType('date') });
+
+            HelloDate.GetCurrentDateFromApi().then((date: string) => {
+                this.setState({ showApiDate: T.translate('app.currentDateFromApiString').toString() + ' ' + date });
+            }, (error) => {
+                console.log(error);
+            });
+
         }
 
         return (
@@ -71,7 +62,14 @@ export class MainComponent extends React.Component<IMainComponentProps,
                     <div className='ms-Grid-row'>
                         <div className='ms-Grid-col ms-sm12 ms-md12 ms-lg12'>
                             <div>
-                                <b>{showText}</b>
+                                <b>{showMomentDate}</b>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='ms-Grid-row'>
+                        <div className='ms-Grid-col ms-sm12 ms-md12 ms-lg12'>
+                            <div>
+                                <b>{this.state.showApiDate}</b>
                             </div>
                         </div>
                     </div>
@@ -106,6 +104,28 @@ export class MainComponent extends React.Component<IMainComponentProps,
                 },
             },
         ];
+    }
+
+    componentWillMount() {
+        loadTheme({
+            palette: {
+                'themeDarker': '#003e66',
+                'themeDark': '#003e66',
+                'themeDarkAlt': '#003e66',
+                'themePrimary': '#003e66',
+                'themeSecondary': '#ff041a',
+                'themeTertiary': '#ff5765'
+            }
+        });
+    }
+
+
+    public onClickShowText(e: Event) {
+        e.preventDefault();
+        e.stopPropagation();
+        this.setState({
+            visibleState: true
+        });
     }
 
     private _setLanguageState(ev?: React.MouseEvent<HTMLElement> | React.KeyboardEvent<HTMLElement>, item?: IContextualMenuItem) {

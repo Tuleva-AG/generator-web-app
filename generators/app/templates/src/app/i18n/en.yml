@@ -2,5 +2,6 @@ app:
   title: Tuleva React Template
   credits: Tuleva AG - design the future
   currentDateString: The current day of month is
+  currentDateFromApiString: The current date from api is
 button:
   text: Show Me the Day!
