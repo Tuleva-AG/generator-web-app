@@ -7,6 +7,5 @@ export interface IMainComponentStates {
     language: string;
     languageName: string;
     visibleState: boolean;
-    showMomentDate: string;
     showApiDate: String;
 }

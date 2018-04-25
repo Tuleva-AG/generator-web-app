@@ -1,5 +1,5 @@
-import * as React from 'react';
 import T from 'i18n-react';
+import * as React from 'react';
 
 import { IHeaderComponentProps } from './headerComponent.props';
 import { IHeaderComponentState } from './headerComponent.state';

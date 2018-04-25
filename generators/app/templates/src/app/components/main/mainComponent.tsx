@@ -7,7 +7,7 @@ import * as React from 'react';
 
 import { FooterComponent } from '../footer/footerComponent';
 import { HeaderComponent } from '../header/headerComponent';
-import HelloDate from './../../utilities/helloDate';
+import GetDate from './../../utilities/getDate';
 import { IMainComponentProps } from './mainComponent.Props';
 import { IMainComponentStates } from './mainComponent.States';
 
@@ -21,7 +21,6 @@ export class MainComponent extends React.Component<IMainComponentProps,
             language: 'de',
             languageName: 'Deutsch',
             visibleState: false,
-            showMomentDate: '',
             showApiDate: ''
         };
     }
@@ -36,15 +35,7 @@ export class MainComponent extends React.Component<IMainComponentProps,
         let showMomentDate = '';
 
         if (this.state.visibleState) {
-            showMomentDate = T.translate('app.currentDateString').toString() + ' ' + HelloDate.GetCurrentDateByType('date');
-            // this.setState({ showMomentDate: T.translate('app.currentDateString').toString() + ' ' + HelloDate.GetCurrentDateByType('date') });
-
-            HelloDate.GetCurrentDateFromApi().then((date: string) => {
-                this.setState({ showApiDate: T.translate('app.currentDateFromApiString').toString() + ' ' + date });
-            }, (error) => {
-                console.log(error);
-            });
-
+            showMomentDate = T.translate('app.currentDateString').toString() + ' ' + GetDate.GetCurrentDateByType('date');
         }
 
         return (
@@ -119,12 +110,13 @@ export class MainComponent extends React.Component<IMainComponentProps,
         });
     }
 
-
     public onClickShowText(e: Event) {
         e.preventDefault();
         e.stopPropagation();
-        this.setState({
-            visibleState: true
+        GetDate.GetCurrentDateFromApi().then((date: string) => {
+            this.setState({ showApiDate: T.translate('app.currentDateFromApiString').toString() + ' ' + date, visibleState: true });
+        }, (error) => {
+            console.log(error);
         });
     }
 

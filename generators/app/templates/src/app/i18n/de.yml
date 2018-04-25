@@ -1,6 +1,8 @@
 app:
   title: Tuleva React Template
-  credits: Tuleva AG - design the future
+  address: Tuleva AG | Arndtstraße 16 | 22085 Hamburg
+  time: Mo. - Fr. 09:30-16:30
+  phone: +49 40 414 33 43-0
   currentDateString: Der aktuelle Tag des Monats ist
   currentDateFromApiString: Das aktuelle Datum von api ist
 button:
