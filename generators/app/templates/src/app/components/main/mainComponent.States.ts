@@ -8,4 +8,5 @@ export interface IMainComponentStates {
     languageName: string;
     visibleState: boolean;
     showApiDate: String;
+    showMomentDate: String;
 }
