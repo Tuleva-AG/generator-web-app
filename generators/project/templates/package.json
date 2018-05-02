@@ -54,8 +54,7 @@
     "json-loader": "^0.5.7",
     "copy-webpack-plugin": "4.5.1",
     "moment": "^2.22.1",
-    "axios": "^0.18.0",
-    "sp-pnp-js": "^3.0.7"
+    "axios": "^0.18.0"
   },
   "devDependencies": {
     "@types/chai": "^4.1.3",

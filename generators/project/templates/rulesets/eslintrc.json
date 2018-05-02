@@ -25,7 +25,7 @@
     "block-spacing": [2, "always"],
     "brace-style": ["warn", "1tbs", { "allowSingleLine": true }],
     "camelcase": [2, { "properties": "never" }],
-    "comma-dangle": [ 2, "always" ],
+    "comma-dangle": [2, "always"],
     "comma-spacing": [2, { "before": false, "after": true }],
     "comma-style": [2, "last"],
     "constructor-super": 2,
@@ -34,7 +34,7 @@
     "eol-last": 2,
     "eqeqeq": [2, "allow-null"],
     "func-call-spacing": [2, "never"],
-    "handle-callback-err": [2, "^(err|error)$" ],
+    "handle-callback-err": [2, "^(err|error)$"],
     "key-spacing": [2, { "beforeColon": false, "afterColon": true }],
     "keyword-spacing": [2, { "before": true, "after": true }],
     "new-cap": [2, { "newIsCap": true, "capIsNew": false }],
@@ -120,11 +120,19 @@
     "no-whitespace-before-property": 2,
     "no-with": 2,
     "object-property-newline": [2, { "allowMultiplePropertiesPerLine": true }],
-    "operator-linebreak": [2, "after", { "overrides": { "?": "before", ":": "before" } }],
+    "operator-linebreak": [
+      2,
+      "after",
+      { "overrides": { "?": "before", ":": "before" } }
+    ],
     "padded-blocks": [2, "never"],
-    "quotes": [2, "double", { "avoidEscape": true, "allowTemplateLiterals": true }],
+    "quotes": [
+      2,
+      "double",
+      { "avoidEscape": true, "allowTemplateLiterals": true }
+    ],
     "rest-spread-spacing": [2, "never"],
-    "semi": [ 2, "always" ],
+    "semi": [2, "always"],
     "semi-spacing": [2, { "before": false, "after": true }],
     "space-before-blocks": [2, "always"],
     "space-before-function-paren": [
@@ -138,7 +146,18 @@
     "space-in-parens": [2, "never"],
     "space-infix-ops": 2,
     "space-unary-ops": [2, { "words": true, "nonwords": false }],
-    "spaced-comment": [2, "always", { "line": { "markers": ["*package", "!", ","] }, "block": { "balanced": true, "markers": ["*package", "!", ","], "exceptions": ["*"] } }],
+    "spaced-comment": [
+      2,
+      "always",
+      {
+        "line": { "markers": ["*package", "!", ","] },
+        "block": {
+          "balanced": true,
+          "markers": ["*package", "!", ","],
+          "exceptions": ["*"]
+        }
+      }
+    ],
     "template-curly-spacing": [2, "never"],
     "use-isnan": 2,
     "valid-typeof": 2,
