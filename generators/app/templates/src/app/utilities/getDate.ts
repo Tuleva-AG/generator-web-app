@@ -8,7 +8,7 @@ export default class GetDate {
     public static GetCurrentDateByType(typeOfDate: string): string {
         switch (typeOfDate) {
             case 'date':
-                return moment().format('DD');
+                return moment().format('D');
 
             default:
                 throw 'Wrong type';
