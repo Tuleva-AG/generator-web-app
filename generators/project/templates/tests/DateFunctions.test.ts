@@ -1,7 +1,7 @@
 /// <reference types="mocha" />
 import { assert } from 'chai';
 
-import HelloDate from './../src/app/utilities/helloDate';
+import HelloDate from './../src/app/utilities/getDate';
 
 
 describe("Date Functions", () => {

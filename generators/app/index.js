@@ -67,7 +67,7 @@ module.exports = class extends Generator {
   prompting() {
     // Have Yeoman greet the user.
     this.log(
-      yosay(`Welcome to the ${chalk.red('tuleva-web-app')} generator from Tuleva!`)
+      yosay(`Welcome to the ${chalk.red('generator-web-app')} generator from Tuleva!`)
     );
 
     let isInsideProject = this._checkInsideProject();

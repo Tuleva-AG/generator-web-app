@@ -29,13 +29,13 @@ const prompts = [{
     type: 'input',
     name: 'description',
     message: 'Project description',
-    default: 'A new Tuleva project'
+    default: 'A new project'
   },
   {
     type: 'input',
     name: 'author',
     message: 'What is the authors name',
-    default: 'Tuleva AG'
+    default: ''
   }
 ];
 
