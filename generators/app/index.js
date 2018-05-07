@@ -9,7 +9,7 @@ module.exports = class extends Generator {
   prompting() {
     // Have Yeoman greet the user.
     this.log(
-      yosay(`Welcome to the ${chalk.red('tuleva-web-app')} generator from Tuleva!`)
+      yosay(`Welcome to the ${chalk.red('generator-web-app')} generator from Tuleva AG!`)
     );
 
     const prompts = [{
@@ -34,13 +34,13 @@ module.exports = class extends Generator {
         type: 'input',
         name: 'description',
         message: 'Project description',
-        default: 'A new Tuleva project'
+        default: 'A new project'
       },
       {
         type: 'input',
         name: 'author',
         message: 'What is the authors name',
-        default: 'Tuleva AG'
+        default: ''
       }
     ];
 
