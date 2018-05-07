@@ -1,15 +1,23 @@
-# generator-tuleva-web-app
+# generator-web-app
+
+|||
+|-|-|
+|Build|[![current build status](https://tulevaag-public.visualstudio.com/_apis/public/build/definitions/17517bf1-7b87-4ef4-af00-c7220a135715/2/badge)](https://tulevaag-public.visualstudio.com/generator-web-app/_build/index?context=allDefinitions&path=%5C&definitionId=2&_a=completed)|
+|Internal release| [![current internal release status](https://rmprodweu1.vsrm.visualstudio.com/Ac85f02bd-2265-486d-8aef-d9b083a0f0fa/_apis/public/Release/badge/17517bf1-7b87-4ef4-af00-c7220a135715/2/2)](https://tulevaag-public.visualstudio.com/generator-web-app/_releases2?definitionId=2&view=mine&_a=releases)|
+|Internal released feed version| ![@tulevaag/generator-web-app package in internal feed in Visual Studio Team Services](https://tulevaag-public.feeds.visualstudio.com/_apis/public/Packaging/Feeds/29fa824c-6d8f-46a6-b409-4d14d962fa7c@43d1dd30-46d6-4d50-8c10-0b39093335e2/Packages/5ca3672d-837e-44d1-a4a0-01069e6057e9/Badge)|
+|Public npm release|[![current public release status](https://tulevaag-public.vsrm.visualstudio.com/_apis/public/Release/badge/17517bf1-7b87-4ef4-af00-c7220a135715/2/3)](https://tulevaag-public.visualstudio.com/generator-web-app/_releases2?definitionId=2&view=mine&_a=releases)|
+
+This is a simple generator web app, that allows you to create a up to date app with the current full stack web development technologies.
+
+**Note**: This project is used with GitHub and the new VSTS public projects features. Where GitHub is used for code and issues, but the complete build pipeline is hosted on VSTS.
+
+* Build Definitions: https://tulevaag-public.visualstudio.com/generator-web-app/_build 
+* Release Definitions: https://tulevaag-public.visualstudio.com/generator-web-app/_release
+
 
 ## Installation
 
-Firstly, we need to configure your environment to use our custom npm feed in our [VSTS](https://tulevaag.visualstudio.com).
-For this vsts-npm-auth must be installed from the public npm feed.
-
-```bash
-npm install -g vsts-npm-auth --registry https://registry.npmjs.com --always-auth false
-```
-
-Secondly, install [Yeoman](http://yeoman.io) using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)). And also install the tuleva web app generator published on our private npm feed.
+Install [Yeoman](http://yeoman.io) using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)). And also install the tuleva web app generator published on our private npm feed.
 
 ```bash
 npm install -g yo
@@ -44,7 +52,3 @@ For npm the following tasks
 ## License
 
  © [Tuleva AG](http://www.tuleva.de)
-
-[build-image]: https://tulevaag.visualstudio.com/_apis/public/build/definitions/723f273b-a8e1-44b1-b9e5-761636473868/6/badge
-
-[build-url]: https://tulevaag.visualstudio.com/Tuleva-ProjectTemplates/_build/index?context=mine&path=%5C&definitionId=6&_a=completed
