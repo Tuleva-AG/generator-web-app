@@ -17,16 +17,16 @@ This is a simple generator web app, that allows you to create a up to date app w
 
 ## Installation
 
-Install [Yeoman](http://yeoman.io) using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)). And also install the tuleva web app generator published on our private npm feed.
+Install [Yeoman](http://yeoman.io) using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)). And also install the web app generator published on the public npm feed.
 
 ```bash
 npm install -g yo
-npm install -g @tuleva/generator-web-app
+npm install -g @tulevaag/generator-web-app
 ```
 And then generate your new project:
 
 ```bash
-yo generator-web-app
+yo @tulevaag/web-app
 ```
 
 The project includes the following frameworks / technologies that can be used:
@@ -51,6 +51,6 @@ For npm the following tasks
 
 ## License
 
-[Apache License](LICENSE.md)
+[Apache License](https://github.com/Tuleva-AG/generator-web-app/blob/master/LICENSE.md)  
 
 © [Tuleva AG](http://www.tuleva.de)
