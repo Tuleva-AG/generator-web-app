@@ -2,34 +2,23 @@
 
 ## Installation
 
-First, we need to configure your environment to use our custom npm feed in our [VSTS](https://tulevaag.visualstudio.com).
+Firstly, we need to configure your environment to use our custom npm feed in our [VSTS](https://tulevaag.visualstudio.com).
 For this vsts-npm-auth must be installed from the public npm feed.
 
 ```bash
 npm install -g vsts-npm-auth --registry https://registry.npmjs.com --always-auth false
 ```
 
-Second, we need to create the .npmrc file with our remote repository and authenticate against VSTS. Use your Azure AD account from tuleva.
-Create the .npmrc file in your new project folder in the root of the project. Copy the following line into this file
-
-```text
-registry=https://tulevaag.pkgs.visualstudio.com/_packaging/TulevaExtensionPreviews/npm/registry/
-always-auth=true
-```
-```bash
-vsts-npm-auth -config .npmrc
-```
-
-Last, install [Yeoman](http://yeoman.io) using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)). And also install the tuleva web app generator published on our private npm feed.
+Secondly, install [Yeoman](http://yeoman.io) using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)). And also install the tuleva web app generator published on our private npm feed.
 
 ```bash
 npm install -g yo
-npm install -g generator-tuleva-web-app --registry https://tulevaag.pkgs.visualstudio.com/_packaging/TulevaExtensionPreviews/npm/registry/
+npm install -g @tuleva/generator-web-app
 ```
 And then generate your new project:
 
 ```bash
-yo tuleva-web-app
+yo generator-web-app
 ```
 
 The project includes the following frameworks / technologies that can be used:
