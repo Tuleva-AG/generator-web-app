@@ -1,17 +1,15 @@
 {
-  "name": "generator-tuleva-web-app",
+  "name": "@tulevaag/generator-web-app",
   "version": "0.0.5",
-  "description": "Generator for standarized web app at Tuleva",
-  "homepage": "https://tulevaag.visualstudio.com/Tuleva-ProjectTemplates/_git/generator-tuleva-web-app?path=%2FREADME.md&version=GBmaster&_a=preview",
+  "description":
+    "Generator for standarized web app using react, webpack and other up to date tools",
+  "homepage": "https://github.com/Tuleva-AG/generator-web-app",
   "author": {
     "name": "Sebastian Schütze",
     "email": "sebastian.schuetze@tuleva.de",
     "url": "http://www.tuleva.de"
   },
-  "files": [
-    "generators",
-    "common"
-  ],
+  "files": ["generators", "common"],
   "main": "generators/index.js",
   "keywords": [
     "generator",
@@ -49,20 +47,11 @@
     "test": "jest"
   },
   "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ],
-    "*.json": [
-      "prettier --write",
-      "git add"
-    ]
+    "*.js": ["eslint --fix", "git add"],
+    "*.json": ["prettier --write", "git add"]
   },
   "eslintConfig": {
-    "extends": [
-      "xo",
-      "prettier"
-    ],
+    "extends": ["xo", "prettier"],
     "env": {
       "jest": true,
       "node": true
@@ -76,10 +65,8 @@
         }
       ]
     },
-    "plugins": [
-      "prettier"
-    ]
+    "plugins": ["prettier"]
   },
-  "repository": "https://tulevaag.visualstudio.com/Tuleva-ProjectTemplates/_git/generator-tuleva-web-app",
+  "repository": "https://github.com/Tuleva-AG/generator-web-app",
   "private": false
 }
