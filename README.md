@@ -51,4 +51,6 @@ For npm the following tasks
 
 ## License
 
- © [Tuleva AG](http://www.tuleva.de)
+[Apache License](LICENSE.md)
+
+© [Tuleva AG](http://www.tuleva.de)
