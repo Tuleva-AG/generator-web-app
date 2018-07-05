@@ -8,6 +8,7 @@
     "email": "sebastian.schuetze@tuleva.de",
     "url": "http://www.tuleva.de"
   },
+  "license": "SEE LICENSE IN LICENSE.md",
   "files": [
     "generators",
     "common"
