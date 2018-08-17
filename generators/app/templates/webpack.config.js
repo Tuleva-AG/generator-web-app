@@ -63,8 +63,10 @@ module.exports = {
   },
   plugins: [new HtmlWebpackPlugin({
       template: require("html-webpack-template"),
+
       appMountId: "app",
       title: "Tuleva React Template",
+      inject: false,
       links: [
         'https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/9.3.0/css/fabric.min.css'
       ]
