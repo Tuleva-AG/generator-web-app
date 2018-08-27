@@ -6,6 +6,7 @@ const path = require("path");
 module.exports = {
   mode: 'development', // production
   entry: [
+    "babel-polyfill",
     "whatwg-fetch", // Use fetch polyfill, since IE11 does not support it yet http://caniuse.com/#feat=fetch
     "es6-promise/auto", // need the es6-promises for the IE11, see http://caniuse.com/#feat=promises
     "./src/index.tsx"
